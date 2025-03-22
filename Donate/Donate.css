@@ -1,0 +1,188 @@
+body{
+    margin: 0;
+    display: flex;
+    overflow: hidden;
+    overflow-y: scroll;
+    background-color: black;
+     
+}
+
+header {
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+
+    width: 100%;
+    height: 14%;
+    z-index: 500;
+    user-select: none;
+}
+
+#logo {
+    position: absolute;
+    width: 100px;
+}
+#Title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: orange;
+    text-align: center;
+}
+
+nav {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 20%;
+    bottom: 0;
+
+    display: inline-flex;
+    justify-content: center;
+    padding-bottom: 3px;
+    border-bottom: 3px solid orange;
+
+}
+
+nav >div {
+    background-color: rgb(255, 255, 255);
+    width:15%;
+    text-align: center;
+    cursor: pointer;
+}
+.donate {
+    border-top: 3px solid orangered;
+}
+#logout{
+    position: absolute;
+    background-color: white;
+    width: 100px;
+    height: 50px;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    font-size: 0.9em;
+    color: orangered;
+    -webkit-text-stroke: orangered 1.5px;
+    font-kerning: normal;
+    border: 3px solid orangered;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+#logout:hover {
+    background-color: orangered;
+    color: white;
+    -webkit-text-stroke-color: white;
+}
+#logout:active {
+    scale: 0.9;
+}
+#donate {
+    border-bottom: 2px red solid;
+
+}
+
+.Donate-page {
+    position: absolute;
+    width: 100%;
+    height: 250vh;
+    background-color: rgb(255, 255, 255);
+    z-index: 300;
+    text-align: center;
+
+    top: 14%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+h2 {
+    font-size: 3em;
+    color: rgb(28, 119, 112);
+    
+}
+h2:first-child {
+    margin-block: 10%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5em;
+}
+.Greendiv {
+    margin-top: 5%;
+    background-color: greenyellow;
+    padding: 2px;
+}
+
+
+.Greendiv > h5 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5em;
+    color: blue;
+}
+
+.dwrap{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+}
+.Infobox {
+    width: 600px;
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 5%;
+    text-wrap: wrap;
+    flex-grow: 1;
+    flex-basis: 600px;
+}
+
+
+.imgwrapper {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    
+
+    flex-grow: 1;
+    flex-basis: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+.imgwrapper > img {
+    
+    border-radius: 30px;
+    width: 500px;
+    height: 300px;
+    top: -5px;
+    left: -5px;
+    box-shadow: 15px 15px orangered;
+    margin-block: 20px;
+    margin-right: 10px;
+}
+.BankDetails {
+    border: 8px solid orangered;
+    width: 80%;
+    
+    justify-self: center;
+    margin-block: 70px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+.BankDetails > p {
+    width: 400px;
+    margin-inline: 100px;
+}
+
+
+.directiveSentence > p {
+    margin: 100px;
+}

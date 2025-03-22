@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="AboutUs.css">
+    <script type="module" src="AboutUs.js"></script>
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="/images/logo.png" alt="Logo">
+        <h1 id="Title">Pawfect Match</h1>
+        <button id="logout" onclick="logout()">LOG OUT</button>
+
+        <nav>
+            <div class="home">Home</div>
+            <div class="aboutUs">About Us</div>
+            <div class="Quiz">Quiz</div>
+            <div class="contact-Us">Contact-Us</div>
+            <div class="donate">Donate</div>
+        </nav>
+    </header>
+    <main>
+    
+        <div class="divwrapper">
+            <div class="Infobox">
+                <h2>About Pawfect Match</h2>
+                <p>Pawfect match is a non-profit organization started by a small group of animal lovers in Chennai, who have
+                    had enough of seeing innocent animals struggle for their lives.
+                    <br>
+                    We help animals in distress (orphaned, injured or abandoned) and find loving homes that treat them
+                    like family.
+                </p>
+            </div>
+            <div class="imgwrapper">
+                <img src="/images/Aboutus_volunteers.png" alt="">
+            </div>
+        </div>
+        <div class="orangeDiv">
+            
+            <div class="orangeDivText">
+                <h2>What We Do</h2>
+                <p>Pawfect Match’s primary mission is to find forever loving families and homes for animals in need.
+
+                    We home/rehome orphaned, abandoned, homeless cats & dogs from the streets after providing them with
+                    state-of-the-art private medical care to ensure a hassle-free experience and life for the adopters
+                    as well as the pet.</p>
+            
+            
+            <ul><h2>In Addition</h2>
+                <li>We get community street dogs sterilized to keep the population in check</li>
+                <li>Educate adopter families on the importance of sterilization</li>
+                <li>Feed stray dogs in the neighbouring areas</li>
+                <li>Regularly follow-up with adopters to ensure the well-being of the pet adopted from Pawfect Match</li>
+                <li>Treat injured animals and release them back into their territories. If we they cannot survive on
+                    their own, we get them adopted.</li>
+                <li>Facilitate rehoming and adoption of animals in areas of low adoption rates/chances</li>
+            </ul>
+            <p>Pawfect Match’s team has independently homed 700+ Pups, Kittens and Dogs in the last 4 years, including several
+                blind/deaf kittens and handicapped dogs. We also closely work with other pet adoption groups to help
+                them with their adoption activities.</p>
+            </div>
+        </div>
+        <div class="finalDiv">
+            <h2>What Do We Get Out of This?</h2>
+            <p>A heart filled with content for being born as a “Human Being”! Pure joy and happiness! No words can
+                express the satisfaction and contentment we get when a pet gets adopted and grows with the family with
+                love and care!</p>
+        </div>
+    </main>
+    <script>
+        function logout() {
+            localStorage.removeItem('loggedIn');
+            window.location.href = '/Login.html';
+        }
+    </script>
+</body>
+
+</html>

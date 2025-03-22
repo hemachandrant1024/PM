@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+}
+
+
+body{
+    margin: 0;
+    display: flex;
+    overflow: hidden;
+    overflow-y: scroll;
+     
+}
+
+header {
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+
+    width: 100%;
+    height: 14%;
+    z-index: 500;
+    user-select: none;
+}
+
+#logo {
+    position: absolute;
+    width: 100px;
+}
+#Title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: orange;
+    text-align: center;
+}
+
+nav {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 20%;
+    bottom: 0;
+
+    display: inline-flex;
+    justify-content: center;
+    padding-bottom: 3px;
+    border-bottom: 3px solid orange;
+
+}
+
+nav >div {
+    background-color: rgb(255, 255, 255);
+    width:15%;
+    text-align: center;
+    cursor: pointer;
+}
+.aboutUs {
+    border-top: 3px solid orangered;
+}
+#logout{
+    position: absolute;
+    background-color: white;
+    width: 100px;
+    height: 50px;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    font-size: 0.9em;
+    color: orangered;
+    -webkit-text-stroke: orangered 1.5px;
+    font-kerning: normal;
+    border: 3px solid orangered;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#logout:hover {
+    background-color: orangered;
+    color: white;
+    -webkit-text-stroke-color: white;
+}
+#logout:active {
+    scale: 0.9;
+}
+
+main {
+    background-color: rgb(255, 255, 255);
+    margin-top: 15vh;
+}
+
+h2 {
+    font-size: 3em;
+    color: rgb(28, 119, 112);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.8em;
+}    
+
+.divwrapper {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+
+    display: inline-flex;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+}
+.Infobox {
+    width: 600px;
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 5%;
+    text-wrap: wrap;
+    flex-grow: 1;
+    flex-basis: 600px;
+}
+
+
+.imgwrapper {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    
+
+    flex-grow: 1;
+    flex-basis: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+.imgwrapper > img {
+    
+    border-radius: 30px;
+    width: 500px;
+    height: 300px;
+    
+}
+
+.orangeDiv {
+    background-color: orange;
+    width: 100%;
+    padding: 10%;
+    margin-top: 10%;
+    color: white;
+    text-wrap: wrap;
+}
+.orangeDiv  h2 {
+    color: white;
+}
+.orangeDivText {
+    width: 80%;
+}
+ul{
+    font-size: 2em;
+}
+ul > h2 {
+    font-size: 1em;
+}
+.finalDiv {
+    background-color: rgb(255, 255, 255);
+    padding: 10%;
+    
+}

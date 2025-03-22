@@ -1,0 +1,301 @@
+body{
+    margin: 0;
+}
+.backToHomeBtn {
+    background-color: white;
+    width: 100px;
+    height: 50px;
+    color: orangered;
+    border: 3px solid orangered;
+    border-radius: 5px;
+    margin: 20px;
+}
+.backToHomeBtn:hover {
+    background-color: orangered;
+    color: white;
+
+}
+
+main {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    
+}
+.header{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 15vh;
+    border-bottom: 4px solid orange;
+    
+}
+
+.Infobox {
+    position: relative;
+    background-color: rgb(252, 252, 252);
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.Infobox > .img {
+    position: absolute;
+    background-color: brown;
+    width: 96%;
+    height: 70%;
+    margin: 2%;
+    border-radius: 5px;
+}
+.abc:first-child > .img {
+    background-image: url('/images/sDog1.webp');
+}
+.abc:nth-child(2) > .img {
+    background-image: url('/images/sDog5.jpeg');
+    
+    background-position: center center;   
+}
+.Infoboxdesc {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 60%;
+    height: 22%;
+    bottom: 0;
+    margin: 2%;
+    border-radius: 5px;
+    color: orangered;
+}
+.Infobox > button {
+    position: absolute;
+    background-color: orangered;
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    bottom: 0; 
+    right: 0;
+    margin: 2%;
+}
+.Infobox > button {
+    z-index: 2;
+}
+.Infobox > button.cl {
+    z-index: 0;
+    background-color: rgb(30, 151, 226);
+   
+}
+
+.addbtn {
+    position: absolute;
+    background-color: plum;
+    width: 100px;
+    height: 100px;
+
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    margin: 50px;
+}
+
+.Infobox {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* .Infobox:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+   
+} */
+
+
+body{
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 20px;
+    
+}
+
+.book-container{
+    padding: 15px;
+    width: 25%;
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    margin: 30px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.book-container h2{
+    color:plum;
+}
+
+.book-container button{
+    background-color: plum;
+    border-radius: 5px;
+    color: black;
+    width: 50%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border: none;
+    margin-top: 10px;
+    
+
+}
+.add-button{
+    background-color: plum;
+    color:black;
+    border-radius: 100%;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top:20px;
+    padding-bottom:20px;
+    font-size: 40px;
+    right: 30px;
+    position:fixed;
+   bottom: 30px;
+   border: 0px;
+   
+}
+
+.popup-overlay{
+    background-color: black ;
+    opacity: 0.8;
+    position: fixed;
+    width: 100%;
+    height: 100%; 
+    left: 0;
+    top: 0;
+    z-index: 10;
+    display: none;
+    
+}
+
+/* .popup-box{
+    background-color: #fd6569;
+    width: 40%;
+    padding: 40px;
+    border-radius: 10px;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    z-index: 2;
+    display: none;
+
+} */
+.popup-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: plum;
+    width: 40%;
+    padding: 40px;
+    border-radius: 10px;
+    z-index: 20;
+    display: none;
+}
+
+
+.popup-box input{
+    background: transparent;
+    border: none;
+    width: 100%;
+    margin: 5px;
+    font-size: 20px;
+    border-bottom: solid black 2px;
+}
+
+.popup-box textarea{
+    background: transparent;
+    border:solid black 2px;
+    width: 100%;
+    margin: 5px;
+    font-size: 20px;
+    border-bottom: solid black 2px;
+}
+
+.popup-box input::placeholder{
+    color: black;
+}
+
+.popup-box input:focus{
+    outline: none;
+}
+.popup-box textarea::placeholder{
+    color: black;
+}
+
+.popup-box textarea:focus{
+    outline: none;
+}
+
+.popup-box button{
+    background-color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+    border-radius: 7%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    margin: 5px;
+}
+
+.admin {
+    display: block;
+    
+}
+
+.InfoOverlay {
+    position: absolute;
+    background-color: black;
+    color: white;
+    width: 100vw;
+    height: 140vh;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.InfoContent {
+    border: 3px solid ;
+    border-radius: 8px;
+    width: 80%;
+    padding: 10%;
+    box-sizing: border-box;
+    justify-self: center;
+    
+}
+
+.InfoContent > button {
+    background-color: white;
+    color: orangered;
+    width: 100px;
+    height: 50px;
+
+    border: 3px solid ;
+    border-radius: 8px;
+    
+}
+.InfoContent > button:hover {
+    background-color: orangered;
+    color: white;
+}
+
+#friend-info {
+    border-top: 3px double ;
+}
+

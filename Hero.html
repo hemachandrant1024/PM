@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Hero.css">
+    <link rel="stylesheet" href="contactUs.css">
+    <script type="module" src="Hero.js"></script>
+    <title>Document</title> 
+    <style>
+        body {
+            user-select: none;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header> 
+        <img id="logo" src="/images/logo.png" alt="Logo" >
+        <h1 id="Title">Pawfect Match</h1>
+        <div class="btn-flex">
+            <button class="admin" id="Interest">Interest</button>
+            <button id="logout" onclick="logout()">LOG OUT</button>
+        </div>
+        
+        <nav>
+            <div class="home">Home</div>
+            <div class="aboutUs">About Us</div>
+            <div class="Quiz">Quiz</div>
+            <div class="contact-Us">Contact-Us</div>
+            <div class="donate">Donate</div>
+        </nav>
+    </header>
+    <main>
+        <div class="wrapper">
+ 
+
+            <div class="explore" id="dog">
+                <div class="circle"></div>
+                <img class="Main-img">
+                <div class="desc">
+                    <p>LOYAL PAWS, LOVING HEARTS - ADOPT A DOG TODAY!</p>
+                </div>
+                <div class="button">
+                    <button id="Dogbtn">Explore</button>
+                </div>
+            </div>
+            <div class="explore" id="cat">
+                <div class="circle"></div>
+                <img class="Main-img">
+                <div class="desc">
+                    <p>FELINE FRIENDS LOOKING FOR FOREVER<br> HOMES!</p>
+                </div>
+                <div class="button">
+                    <button id="Catbtn">Explore</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <footer class="hpage">&#169 2025 Pawfect Match - All Rights Reserved</footer>
+
+    <script>
+        function logout() {
+            localStorage.removeItem('loggedIn');
+            window.location.href = '/Login.html';
+        }
+    </script>
+</body>
+
+</html>

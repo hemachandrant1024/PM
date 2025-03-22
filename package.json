@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "email.min.js": "^1.2.3-0",
+    "emailjs": "^4.0.3"
+  }
+}

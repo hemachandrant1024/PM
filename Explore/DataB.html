@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataB - Interested Users</title>
+    <style>
+        h1 {
+            margin-top: 50px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border-top: 2px solid black;
+            border: 2px solid black;
+        }
+
+        th,
+        td {
+            border: 1px solid gainsboro;
+            border-bottom: 2px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: rgba(255, 162, 0, 0.656);
+        }
+
+
+
+        .btn {
+            position: relative;
+            width: 100%;
+            height: 50px;
+        }
+
+        .backToHomeBtn {
+            position: absolute;
+            background-color: white;
+            width: 100px;
+            height: 50px;
+            left: 0;
+            color: orangered;
+            border: 3px solid orangered;
+            border-radius: 5px;
+        }
+
+        .backToHomeBtn:hover {
+            background-color: orangered;
+            color: white;
+
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div class="btn"><button class="backToHomeBtn">
+            &larr;Back
+        </button>
+    </div>
+    <h1>Interested Users Data</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>type</th>
+                <th>PetName</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>PhoneNumber</th>
+                <th>Date & Time</th>
+            </tr>
+        </thead>
+        <tbody id="interest-table">
+            <!-- Data will be inserted here -->
+        </tbody>
+    </table>
+
+    <script type="module">
+        import { getInterestedUsers } from './DataB.js';
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let interestedList = getInterestedUsers(); // Get data from DataB.js
+            let tableBody = document.getElementById("interest-table");
+            let counter = 1;
+            interestedList.forEach(entry => {
+                let row = document.createElement("tr");
+                row.innerHTML = `<td>${counter}</td><td>${entry.type}</td><td>${entry.dogName || entry.catName}</td><td>${entry.name}</td><td>${entry.email}</td><td>${entry.mobile}</td><td>${entry.date}</td>`;
+                tableBody.appendChild(row);
+                counter++;
+            });
+        });
+
+        var backbtn = document.querySelector('.backToHomeBtn');
+        backbtn.addEventListener('click', () => {
+            document.location.href = '/Hero.html';
+        })
+    </script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS user ID
+      })();
+    </script>
+    
+</body>
+
+</html>

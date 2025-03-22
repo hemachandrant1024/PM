@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup & Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+        input {
+            display: block;
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: darkblue;
+        }
+        .hidden {
+            display: none;
+        }
+        /* Admin Panel */
+        .admin-panel {
+            margin-top: 20px;
+            padding: 15px;
+            background: #ffe5e5;
+            border: 2px solid red;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 id="formTitle">Signup</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button id="signupBtn" onclick="signup()">Signup</button>
+        <button id="loginBtn" class="hidden" onclick="login()">Login</button>
+        <p id="toggleText" onclick="toggleForm()" style="cursor:pointer; color:blue;">Already have an account? Login here</p>
+        <p id="message"></p>
+    </div>
+
+    <!-- Admin Panel -->
+    <div class="admin-panel" id="adminPanel">
+        <h3>Admin Dashboard</h3>
+        <p>Welcome, Admin! Here are your special controls.</p>
+    </div>
+
+    <script>
+        function signup() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username && password) {
+                localStorage.setItem('username', username);
+                localStorage.setItem('password', password);
+                localStorage.setItem('role', 'user'); // Default role
+                document.getElementById('message').innerText = 'User registered successfully!';
+                toggleForm();
+            } else {
+                document.getElementById('message').innerText = 'Please enter both fields!';
+            }
+        }
+
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const storedUser = localStorage.getItem('username');
+            const storedPass = localStorage.getItem('password');
+
+            if (username === "admin" && password === "@123#4") {
+                localStorage.setItem('role', 'admin');
+                document.getElementById('message').innerText = 'Admin login successful! Redirecting...';
+                setTimeout(() => {
+                    window.location.href = '/Welcome/home.html';
+                }, 1000);
+            } 
+            else if (username === storedUser && password === storedPass) {
+                localStorage.setItem('role', 'user');
+                document.getElementById('message').innerText = 'Login successful! Redirecting...';
+                setTimeout(() => {
+                    window.location.href = '/Welcome/home.html';
+                }, 1000);
+            } 
+            else {
+                document.getElementById('message').innerText = 'Invalid credentials!';
+            }
+        }
+
+        function toggleForm() {
+            const formTitle = document.getElementById('formTitle');
+            const signupBtn = document.getElementById('signupBtn');
+            const loginBtn = document.getElementById('loginBtn');
+            const toggleText = document.getElementById('toggleText');
+
+            // Clear inputs when toggling
+            document.getElementById('username').value = '';
+            document.getElementById('password').value = '';
+            document.getElementById('message').innerText = '';
+
+            if (signupBtn.classList.contains('hidden')) {
+                formTitle.innerText = 'Signup';
+                signupBtn.classList.remove('hidden');
+                loginBtn.classList.add('hidden');
+                toggleText.innerText = 'Already have an account? Login here';
+            } else {
+                formTitle.innerText = 'Login';
+                signupBtn.classList.add('hidden');
+                loginBtn.classList.remove('hidden');
+                toggleText.innerText = "Don't have an account? Signup here";
+            }
+        }
+
+        
+
+        checkAdmin(); // Run on page load
+    </script>
+</body>
+</html>

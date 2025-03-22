@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Donate.css">
+    <script type="module" src="Donate.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="/images/logo.png" alt="Logo">
+        <h1 id="Title">Pawfect Match</h1>
+        <button id="logout" onclick="logout()">LOG OUT</button>
+
+        <nav>
+            <div class="home">Home</div>
+            <div class="aboutUs">About Us</div>
+            <div class="Quiz">Quiz</div>
+            <div class="contact-Us">Contact-Us</div>
+            <div class="donate">Donate</div>
+        </nav>
+    </header>
+    <div class="Donate-page">
+        <h2>Together Against Animal Homelessness.
+            Every Penny Counts.</h2>
+        <div class="dwrap">
+            <div class="Infobox">
+                <h2>Donate & Support</h2>
+                <p>
+                    Every day, animals in our community suffer from neglect, abuse, and homelessness. <br><br>
+                    Pawfect Match is dedicated to providing the care and support these animals need to thrive. <br><br>
+                    By donating to our cause, you can help make a difference in the lives of these innocent creatures.
+                    Your generosity will enable us to continue our work rescuing and rehoming animals, as well as
+                    educating
+                    the public on the importance of pet adoption. <br><br>
+                    <b>Please consider making a donation today and join us in our mission to create a better world for
+                        all
+                        dogs and cats.</b>
+                </p>
+            </div>
+
+            <div class="imgwrapper"><img src="/images/donation.jpg" alt="Donation"></div>
+        </div>
+        <div class="Greendiv">
+            <h5>Claim tax benefits on your donations under Section 80G</h5>
+        </div>
+        <div class="BankDetails">
+            <p>ACCOUNT NAME: Pawfect Match</p>
+            <p>ACCOUNT NUMBER: 502 000 5397 2406</p>
+            <p>ACCOUNT TYPE: CURRENT ACCOUNT</p>
+            <p>IFSC CODE: HDFC0000010</p>
+            <p>BANK NAME: HDFC</p>
+            <p>BRANCH NAME: BESANT NAGAR</p>
+            <p>GPAY UPI: Pawfect Match.chennai@okhdfcbank</p>
+            <p>PHONEPE UPI: Pawfect Match@ybl</p>
+        </div>
+
+        <section class="directiveSentence">
+            <p>To avail tax benefits on your donation, send us your <b> NAME, PHONE NUMBER </b>&<b> PAN CARD NUMBER</b>
+                to
+                finance@Pawfect Match.in. We will then send you the 80G receipt.
+            </p>
+            <p>If you have any queries, please reach out to us via email: hello@Pawfect Match.in</p>
+        </section>
+    </div>
+
+
+    <script>
+        function logout() {
+            localStorage.removeItem('loggedIn');
+            window.location.href = '/Login.html';
+        }
+    </script>
+</body>
+
+</html>

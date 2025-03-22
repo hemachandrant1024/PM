@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contactUs.css">
+    <script type="module" src="contacktUs.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img id="logo" src="/images/logo.png" alt="Logo">
+        <h1 id="Title">Pawfect Match</h1>
+        <button id="logout" onclick="logout()">LOG OUT</button>
+
+        <nav>
+            <div class="home">Home</div>
+            <div class="aboutUs">About Us</div>
+            <div class="Quiz">Quiz</div>
+            <div class="contact-Us">Contact-Us</div>
+            <div class="donate">Donate</div>
+        </nav>
+    </header>
+    <div class="ContactUs-page">
+        <h2 class="cpage">Contact</h2>
+        <p class="cpage">Are you looking forward to give a pet (Indian Mongrel Pups, Dogs or Indian Kittens or Cats) its
+            forever home? Your perfect furry companion is waiting for you with us. Just leave behind the details by
+            filling up the simple form below and our team will get in touch with you about the adoption process.</p>
+       <div class="flexwrap">
+            <form action="" class="cpage">
+            <h2 class="cpage">Send Us A Message</h2>
+            
+            <input class="cpage" type="text" placeholder="First Name" required>
+            <input class="cpage" type="email" name="" id="" placeholder="Email" required>
+            <input class="cpage" type="tel" name="telephone" id="" placeholder="Phone Number" pattern="[0-9]{10}"
+                maxlength="12">
+            <input class="cpage" type="text" placeholder="Pet Name" required>
+            <textarea class="cpage" name="" placeholder="leave a message" id="" required></textarea>
+            <button type="submit" class="cpage">Send Message</button>
+            <div class="b-line"></div>
+            
+        </form>
+        <div class="o-line">
+            <h2>Online Presence</h2>
+            <p>
+                hello@PawfectMatch.in </p>
+            <p>
+                @PawfectMatch.in </p>
+            <p>
+                @PawfectMatch.in </p>
+            <p>
+                @PawfectMatch_in</p>
+        </div></div>
+        <h2 class="cpage">Operational Address</h2>
+        <p class="cpage">44, Padmanabha Nagar, Adyar, Chennai - 600 020</p>
+        <div class="footersection">
+        <footer class="cpage">
+            <img src="/images/Background-V1.png" alt="">
+            <div class="wrapcfoot">
+                <div class="footercpage">
+                    <h3>Lets stay connected</h3>
+                    <p>Connect with us for updates on our activities, upcoming events and pet care information.</p>
+                </div>
+                <div class="footercpage">
+                    <h3>Looking to adopt a pet?</h3>
+                    <p>Please get in touch with one of our members:</p>
+                    <div class="footerboxwrap">
+                    <div class="footerbox">
+                        <h3>Mail us at</h3>
+                        <p>hello@gmail.com</p>
+                    </div>
+                    <div class="footerbox">
+                        <h3>Availability</h3>
+                        <p>10 AM - 07 PM</p>
+                    </div></div>
+                </div>
+            </div>
+        </footer></div>
+    </div>
+
+    <script>
+        function logout() {
+            localStorage.removeItem('loggedIn');
+            window.location.href = '/Login.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Compatibility Quiz</title>
+</head>
+<body>
+    <div class="btn"><button class="backToHomeBtn">
+        &larr;Back
+    </button>
+</div>
+    
+    <div class="quiz-container">
+        <h2>Find Your Perfect Pet</h2>
+        <form id="quizForm">
+            <div class="question">
+                <fieldset>
+                    <legend>1. What type of home do you live in?</legend>
+                <label><input type="radio" name="home" value="small"> Apartment (Small)</label><br>
+                <label><input type="radio" name="home" value="medium"> House with a small yard</label><br>
+                <label><input type="radio" name="home" value="large"> House with a big yard</label><br>
+           </fieldset>
+                 </div>
+
+            <div class="question">
+                <fieldset>
+                <legend>2. How active is your lifestyle?</legend>
+                <label><input type="radio" name="activity" value="low"> Prefer staying indoors</label><br>
+                <label><input type="radio" name="activity" value="medium"> Occasional walks</label><br>
+                <label><input type="radio" name="activity" value="high"> Daily exercise</label>
+                </fieldset>
+            </div>
+
+            <div class="question">
+                <fieldset>
+                    <legend>3. Do you have children?</legend>
+                <label><input type="radio" name="children" value="no"> No</label><br>
+                <label><input type="radio" name="children" value="yes"> Yes</label>
+            </fieldset>
+                </div>
+
+            <div class="question">
+                <fieldset>
+                    <legend>4. How much time can you dedicate to a pet daily?</legend>
+                <label><input type="radio" name="time" value="low"> Less than an hour</label><br>
+                <label><input type="radio" name="time" value="medium"> 1-2 hours</label><br>
+                <label><input type="radio" name="time" value="high"> 3+ hours</label><br>
+            </fieldset>
+                </div>
+
+            <button type="button" onclick="calculateMatch()">Find My Pet</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    
+</body>
+</html>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+} 
+.btn {
+    position: relative;
+    width: 100%;
+    height: 50px;
+}
+.backToHomeBtn {
+    position: absolute;
+    background-color: white;
+    width: 100px;
+    height: 50px;
+    left: 0;
+    color: orangered;
+    border: 3px solid orangered;
+    border-radius: 5px;
+}
+.backToHomeBtn:hover {
+    background-color: orangered;
+    color: white;
+
+}
+
+.quiz-container {
+    width: 50%;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+    margin: 60px 0;
+    text-align: center;
+}
+
+button {
+    background: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #e65c00;
+}
+
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+}
+</style> 
+
+<script>
+    var backbtn = document.querySelector('.backToHomeBtn');
+    backbtn.addEventListener('click',()=>{
+        document.location.href = '/Hero.html';
+    })
+function calculateMatch() {
+    let home = document.querySelector('input[name="home"]:checked');
+    let activity = document.querySelector('input[name="activity"]:checked');
+    let children = document.querySelector('input[name="children"]:checked');
+    let time = document.querySelector('input[name="time"]:checked');
+
+    if (!home || !activity || !children || !time) {
+        document.getElementById("result").innerHTML = "Please answer all questions!";
+        return;
+    }
+    
+    let score = 0;
+
+    // Scoring system (adjust values as needed)
+    if (home.value === "large") score += 2;
+    if (activity.value === "high") score += 2;
+    if (children.value === "yes") score += 1;
+    if (time.value === "high") score += 2;
+
+    let resultText = "";
+
+    if (score >= 5) {
+        resultText = "🐶 You should adopt a High-Energy Dog (Labrador, Husky)!";
+    } else if (score >= 3) {
+        resultText = "🐱 A Friendly Cat or Medium-Energy Dog (Beagle, Poodle) would be a great fit!";
+    } else {
+        resultText = "🐰 Consider a Low-Maintenance Pet like a Rabbit or a Senior Dog!";
+    }
+
+    document.getElementById("result").innerHTML = resultText;
+}
+</script>
+
